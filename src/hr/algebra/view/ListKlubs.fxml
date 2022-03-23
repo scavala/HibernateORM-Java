@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controller.ListKlubsController">
+    <children>
+        <TableView fx:id="tvKlubs" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="tcName" prefWidth="500.0" text="Name" />
+            </columns>
+           
+        </TableView>
+        <Button layoutX="507.0" layoutY="309.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: red;" text="Delete" textFill="WHITE" />
+        <Button layoutX="427.0" layoutY="309.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: green;" text="Edit" textFill="WHITE" />
+    </children>
+</AnchorPane>

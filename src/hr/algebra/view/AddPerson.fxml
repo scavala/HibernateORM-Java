@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controller.AddPersonController">
+    <children>
+        <ImageView fx:id="ivPerson" fitHeight="188.0" fitWidth="162.0" layoutX="396.0" layoutY="45.0">
+            <image>
+                <Image url="@../../../assets/no_image.png" />
+            </image>
+        </ImageView>
+        <GridPane layoutX="27.0" layoutY="41.0" prefHeight="239.0" prefWidth="352.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="118.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="214.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="21.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="First name:">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="tfFirstName" GridPane.columnIndex="1" />
+                <Label text="Last name:" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Label>
+                <Label text="Age:" GridPane.rowIndex="2">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Label>
+                <Label text="Email:" GridPane.rowIndex="3">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="tfLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="tfAge" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="tfEmail" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="lbFirstNameError" text="X" textFill="RED" visible="false" GridPane.columnIndex="2" />
+                <Label fx:id="lbAgeError" text="X" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label fx:id="lbLastNameError" text="X" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label fx:id="lbEmailError" text="X" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label text="Klub:" GridPane.rowIndex="4">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Label>
+                <ComboBox fx:id="cbKlub" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="lblKlubError" text="X" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <Button layoutX="497.0" layoutY="257.0" mnemonicParsing="false" onAction="#commit" style="-fx-background-color: blue;" text="Commit" textFill="WHITE" />
+        <Button layoutX="408.0" layoutY="257.0" mnemonicParsing="false" onAction="#uploadImage" style="-fx-background-color: purple;" text="Upload" textFill="WHITE" />
+        <Label fx:id="lbIconError" layoutX="566.0" layoutY="53.0" text="X" textFill="RED" visible="false" />
+        <Button layoutX="497.0" layoutY="298.0" mnemonicParsing="false" onAction="#reset" style="-fx-background-color: orange;" text="Reset" textFill="WHITE" />
+
+    </children>
+</AnchorPane>
